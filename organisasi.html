@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ariko's website</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Style penataan kolom */
+        .profile-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Menempatkan kolom di tengah */
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .profile-card {
+            text-align: center;
+            background: linear-gradient(to left, #e1e1e1, #b0b0b0);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+            width: 250px;
+            padding: 10px;
+            transition: transform 0.3s;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-10px); /* Efek angkat sedikit */
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile-name {
+            font-size: 1rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .profile-description {
+            font-size: 0.9rem;
+            color: #000000;
+        }
+
+        .profile-video {
+            width: 100%;
+            aspect-ratio: 9 / 16; /* Mengatur rasio video menjadi 9:16 */
+            margin-bottom: 10px;
+            border-radius: 8px;
+            object-fit: cover;
+            display: none; /* Awalnya disembunyikan */
+        }
+
+        /* Responsif untuk layar kecil */
+        @media (max-width: 600px) {
+            .profile-card {
+                flex: 1 1 100%; /* Mengubah ukuran kartu untuk layar kecil */
+                max-width: 100%; /* Pastikan elemen tidak lebih dari 100% */
+            }
+        }
+
+        /* Tambahkan background-color ke elemen section */
+        section {
+            background-color: #120238;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-button-container {
+            text-align: center; /* Memusatkan tombol */
+            margin-top: 20px;
+        }
+
+        .back-button {
+            display: inline-block;
+            text-decoration: none; /* Menghapus garis bawah */
+            color: black; /* Warna teks */
+            background-color: yellow; /* Warna latar tombol */
+            padding: 10px 20px; /* Mengatur ruang di dalam tombol */
+            border-radius: 25px; /* Membuat tombol berbentuk lonjong */
+            font-size: 1rem; /* Ukuran teks */
+            font-weight: bold; /* Menebalkan teks */
+            transition: background-color 0.3s, transform 0.2s; /* Efek animasi */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+        }
+
+        .back-button:hover {
+            background-color: orange; /* Warna saat hover */
+            transform: scale(1.05); /* Sedikit memperbesar tombol saat hover */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Menambah bayangan saat hover */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h2></h2>
+</header>
+
+<!-- Galeri Foto Profil Anggota -->
+<section>
+    <h2>Dibawah ini adalah Video Ucapan untuk Papa</h2>
+    <div class="profile-gallery">
+        <div class="profile-card">
+            <button class="show-video-button" onclick="showVideo('mpk-video')">Lihat Video</button>
+            <video id="mpk-video" controls class="profile-video">
+                <source src="WhatsApp Video 2024-12-29 at 22.51.12.mp4" type="video/mp4">
+                
+            </video>
+            <div class="profile-name">Dari Momi</div>
+            <p class="profile-description"></p>
+        </div>
+
+        <div class="profile-card">
+            <button class="show-video-button" onclick="showVideo('osis-video')">Lihat Video</button>
+            <video id="osis-video" controls class="profile-video">
+                <source src="WhatsApp Video 2024-12-29 at 23.00.53.mp4" type="video/mp4">
+                
+            </video>
+            <div class="profile-name">Dari Rayhan</div>
+            <p class="profile-description"></p>
+        </div>
+
+        <div class="profile-card">
+            <button class="show-video-button" onclick="showVideo('du-video')">Lihat Video</button>
+            <video id="du-video" controls class="profile-video">
+                <source src="WhatsApp Video 2024-12-29 at 22.51.15.mp4" type="video/mp4">
+
+            </video>
+            <div class="profile-name">Dari Raysha</div>
+            <p class="profile-description"></p>
+        </div>
+    </div>
+</section>
+
+<!-- Tombol Kembali -->
+<div class="back-button-container">
+    <a href="halaman-jelajahi.html" class="back-button">Kembali ke halaman utama</a>
+</div>
+
+<script>
+    function showVideo(videoId) {
+        const allVideos = document.querySelectorAll('.profile-video');
+        allVideos.forEach(v => {
+            if (v.id !== videoId && v.style.display === 'block') {
+                v.style.display = 'none';
+                v.pause();
+                v.currentTime = 0;
+            }
+        });
+
+        const video = document.getElementById(videoId);
+        video.style.display = 'block';
+        video.scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
+
+</body>
+</html>

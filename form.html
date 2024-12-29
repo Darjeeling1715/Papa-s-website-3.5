@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kirim Ucapan untuk Papa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #6a1b9a;
+            
+        }
+        form {
+            margin: 20px auto;
+            width: 80%;
+            max-width: 450px; /* Memperlebar sedikit agar form lebih luas */
+            background-color: #fff;
+            color: #333;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            text-align: left;
+            margin-left: 10px; /* Tambahkan margin kiri untuk jarak yang lebih rapi */
+        }
+        input, textarea, button {
+            width: 100%;
+            margin-bottom: 15px; /* Tambahkan jarak antara elemen input dan button */
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Agar padding tidak menambah lebar elemen */
+        }
+        button {
+            background-color: #6a1b9a;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 14px;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #580e7a;
+        }
+        input, textarea {
+            font-size: 16px;
+            color: #333;
+        }
+        input::placeholder, textarea::placeholder {
+            color: #aaa; /* Membuat placeholder lebih terang */
+        }
+
+        .back-button {
+            display: inline-block;
+            text-decoration: none;
+            color: black;
+            background-color: yellow;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .back-button:hover {
+            background-color: orange;
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .back-button-container {
+            display: flex; /* Menggunakan flexbox */
+            justify-content: center; /* Memusatkan secara horizontal */
+            align-items: center; /* Memusatkan secara vertikal */
+            margin-top: 20px; /* Tambahkan jarak dari elemen lainnya */
+        }
+        
+    </style>
+</head>
+<body>
+
+    <h1>Kirim Ucapan untuk Papa</h1>
+
+    <form action="https://formspree.io/f/mannqpzb" method="POST">
+        <!-- Nama -->
+        <label for="name">Nama Anda (Opsional)</label>
+        <input type="text" name="name" id="name" placeholder="Boleh nama samaran">
+
+        <!-- Pesan -->
+        <label for="message">Tulis ucapan Anda di sini</label>
+        <textarea name="message" id="message" placeholder="Tulis ucapan Anda (Apapun santai aja ngga perlu takut salah)" required></textarea>
+
+        <!-- Tombol Kirim -->
+        <button type="submit">Kirim Ucapan</button>
+    </form>
+
+
+
+        <!-- Tombol Kembali -->
+        <div class="back-button-container">
+            <a href="halaman-jelajahi.html" class="back-button">Kembali ke halaman utama</a>
+        </div>
+
+</body>
+</html>
+
+website made and built by ariko

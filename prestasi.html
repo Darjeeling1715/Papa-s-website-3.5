@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ariko's website</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Style penataan kolom gambar */
+        .profile-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1%; /* Jarak antar elemen lebih kecil */
+            margin-top: 20px;
+        }
+
+        .profile-card {
+            background: linear-gradient(to top, #928d8d, #484749);
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+            width: 15%; /* Lebar lebih kecil untuk memuat lebih banyak */
+            padding: 1%;
+            margin-top: 2%;
+            transition: transform 0.3s;
+        }
+
+        .profile-card:hover {
+            transform: scale(1.3);
+    
+}
+
+        .profile-img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+
+        /* Responsive design untuk layar kecil */
+        @media (max-width: 768px) {
+            .profile-card {
+                width: 25%; /* Lebar sedang untuk layar tablet */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .profile-card {
+                width: 45%; /* Lebar lebih besar untuk layar kecil */
+            }
+        }
+
+        /* Tambahkan background-color ke elemen section */
+        section {
+            background-color: #120238;
+            display: flex;
+            padding: 3%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    /* Gaya untuk gambar dalam card */
+    .profile-img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 8px;
+    }
+
+    /* Responsive design untuk layar kecil */
+    @media (max-width: 768px) {
+        .profile-card {
+            width: 30%; /* Lebar sedang untuk layar tablet */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .profile-card {
+            width: 45%; /* Lebar lebih besar untuk layar kecil */
+        }
+    }
+
+    header {
+            background-color: #6a1b9a;
+            color: white;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .back-button {
+            display: inline-block;
+            text-decoration: none;
+            color: black;
+            background-color: yellow;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .back-button:hover {
+            background-color: orange;
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .back-button-container {
+            display: flex; /* Menggunakan flexbox */
+            justify-content: center; /* Memusatkan secara horizontal */
+            align-items: center; /* Memusatkan secara vertikal */
+            margin-top: 20px; /* Tambahkan jarak dari elemen lainnya */
+        }
+</style>
+
+    </style>
+<header>
+    <h2>Kumpulan Ucapan</h2>
+</header>
+<body>
+<!-- Galeri Foto Prestasi -->
+    <section>
+
+        <div class="profile-gallery">
+            <div class="profile-card">
+            "Pa, kau adalah sopir utama dalam perjalanan keluarga kita. Terima kasih sudah selalu membawa kami ke arah yang benar. Selamat ulang tahun" 7
+            </div>
+
+            <div class="profile-card">
+            "Di bawah hujan atau terik matahari, Papa tetap jadi roda penggerak yang tak kenal lelah. Selamat ulang tahun, Pa!" 
+            </div>
+
+            <div class="profile-card">
+           "Meski jalan hidup penuh rintangan, Papa selalu menjadi rem yang menjaga kami dari bahaya. Selamat ulang tahun, Pa !"
+            </div>
+
+            <div class="profile-card">
+            "Pa, kau adalah sopir utama dalam perjalanan keluarga kita. Terima kasih sudah selalu membawa kami ke arah yang benar. Selamat ulang tahun!" 
+            </div>
+
+            <div class="profile-card">
+            "Di setiap jalan terjal kehidupan, Papa tetap menjadi suspensi kuat yang melindungi keluarga. Selamat ulang tahun, Pa!"
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Tombol Kembali -->
+    <div class="back-button-container">
+        <a href="halaman-jelajahi.html" class="back-button">Kembali ke halaman utama</a>
+    </div>
+    
+</body>
+</html>
